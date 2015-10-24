@@ -14,6 +14,7 @@ var dateTime = 0;
 /*jshint -W058 */
 var allEnemies = [];
 
+
 // define random position function
 function randomYPosition() {
     var x = Math.floor((Math.random() * 3) + 1);
