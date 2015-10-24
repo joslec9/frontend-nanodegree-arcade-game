@@ -11,7 +11,7 @@ var playerMoveY = 83;
 var playerStartingPos = [canvasW / 2 - playerWidth / 2, canvasH - 2 * playerWidth]; // starting player position centralized on x axis
 
 var dateTime = 0;
-
+/*jshint -W058 */
 var allEnemies = [];
 
 // define random position function
@@ -24,7 +24,7 @@ function randomYPosition() {
         return 155;
     }
     return 238;
-};
+}
 
 function randomXPosition() {
     return -(Math.floor((Math.random() * 500) + 100));
@@ -33,7 +33,7 @@ function randomXPosition() {
 // random speed function
 function randomSpeed() {
     return Math.floor((Math.random() * 50) + 50) + enemySpeed;
-};
+}
 
 // Enemies our player must avoid
 var Enemy = function() {
@@ -103,7 +103,7 @@ Player.prototype.update = function() {
         ctx.clearRect(0, 0, canvas.width, canvas.height); // if the score changes clear the canvas so new score amount could be added
         this.score += 100;
 
-        if (this.score % 500 == 0){ // if 500 points is achieved a new bug enemy will be added
+        if (this.score % 500 === 0){ // if 500 points is achieved a new bug enemy will be added
             new Enemy;
         }
 
