@@ -123,7 +123,7 @@ Player.prototype.render = function() {
     for (i = 0; i < this.life; i++) {
         //console.log(this.life)
         ctx.drawImage(Resources.get(this.lifeImg), pos, 0, 101/3, 171/3); // render hearts with the third of the real img size
-        pos += 101/3;
+        pos += 101 / 3;
     }
 
     // display score
